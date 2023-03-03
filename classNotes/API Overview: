@@ -1,0 +1,93 @@
+API Overview:
+Web UI Automation - Web Application (Web Browser)
+API Automation - Web Services, Micro Services Automation
+Mobile Automation
+
+APIs / Web Services / Micro Services :
+API - Application Programming Interface
+
+Web Services - When we request something through web and get response back
+
+Amazon - Code (Web Servers, Business Logic, Front-End, DB)
+Front-End Application - HTML, CSS, Script
+Web Server - Request , Response (Valid/Invalid)
+
+Business Logic will evaluate request 
+- Are these valid request?
+- What resources asking for?
+- Create a response using DB
+
+DB - Collection Data (Images, Text, Prices, Descriptions, Catageroy)
+
+www.amazon.com (Domain - URL)
+URL - Unified Resources Locator
+
+Middle Layer / Middleware / Application Layer
+- Web Services (Request, Response), Web Server, Business Logic
+
+Two Types of Web Services -
+1. SOAP - 5% (Envalop, XML)
+2. RESTFull / REST API - 95% (XML, JSON, Header)
+
+Manual Testing tools - Postman, SoapUI, Ready API
+Automating Web Services - REST : Rest-Assured (JAVA)
+SOAP/REST/UI/Mobile/Performace : Karate Framework (Maven JAVA) Grovy-DSL
+
+file.json
+JSON - JavaScript Object Notation
+int a = 1; java
+var a = 1 js
+var jsObject = {
+	"name": "john",
+	"dob":"01/02/1966",
+	"id":1
+}
+
+Auto Insurance - Web Service
+- Quote - Take all your information and in response it gives you premium rate
+- Coverage - Change some coverages
+- Discount - If you combine your home insurance or rental insuranc, costco, full payment
+- Agrrement - View your agrrement
+- I Agree - Consent
+- Payment view - 
+- Paymnet done -
+- POI - 
+- Bind - 
+
+Netflix - Micro Services
+Web Services:
+Session - Login, Re-Connect
+Browse - Discovery Content
+Linear - LiveTv
+Saved - recording
+Playback - Start, Close, Resume Point
+CAM : Content Access Management. Check region, License Request,
+MetaData - More Like this, Description, Rating
+
+Web Service / API :
+https://www.amazon.com/s?k=iphone&crid=3OEHIBEJ6UNN2&sprefix=iphone%2Caps%2C78&ref=nb_sb_noss_1
+ - BaseURL - https://www.amazon.com
+ - endpoint - /s
+Resource locator - 
+ - Query Params = value
+k=iphone
+crid=3OEHIBEJ6UNN2
+sprefix=iphone%2Caps%2C78
+ref=nb_sb_noss_1
+
+Request:
+ - HTTP Methods - POST, PUT, GET, DELETE
+ CURD - Create, Update, Read, Delete
+ - URL : Base URL + Endpoints + Resource Locator
+ - Payload / Request Body : POST, PUT, DELETE (Optinal), (GET do not required a payload), empty body {}
+ - Request Header
+ - Query Params (Optional)
+ 
+Response:
+ - Response Code / HTTP Status Code
+ 200 - 200-299 : 200 Success, 201 Successfully Created, 204 No Content
+ 300 - 300-399 : Redirecting
+ 400 - 400-499 : Client Side error, 404 Not Found
+ 500 - 500-599 : Server Side error, 504 Server unavailable
+ - Response Body (Optional)
+ - Response Header
