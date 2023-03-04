@@ -5,16 +5,16 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
-public class PlayersTest {
+public class GetTest {
 
 	@Test(enabled = false)
 	public void getPlayersPreetyPrint() {
-		RestAssured.get("http://localhost:3000/countries/10").prettyPrint();
+		RestAssured.get("http://enthrall.education:3001/players").prettyPrint();
 	}
 	
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void getPlayersVar() {
-		Response response = RestAssured.get("http://localhost:3000/countries");
+		Response response = RestAssured.get("http://enthrall.education:3001/countries");
 		System.out.println(response.asString());
 	}
 	
@@ -42,17 +42,29 @@ public class PlayersTest {
 		.statusCode(200);
 	}
 	
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void getPlayersResponseValidation() {
 		RestAssured.given()
-		.log().all()
+		.log().all()//Request Log
 		.get("http://localhost:3000/players/3")
 		.then()
-		.log().all()
+		.log().all()//Response Log
 		.statusCode(200)
 		.and()
 		.body("id", equalTo(3))
 		.body("firstName", equalTo("Sakibal"))
 		.body("DOB", equalTo("11/02/1992"));
+	}
+	
+	@Test(enabled = true)
+	public void getPlayersBaseUriPath() {
+		RestAssured.given()
+		.baseUri("http://localhost:3000")
+		.basePath("/players/3")
+		.log().all()//Request Log
+		.get()
+		.then()
+		.log().all()//Response Log
+		.statusCode(200);
 	}
 }
