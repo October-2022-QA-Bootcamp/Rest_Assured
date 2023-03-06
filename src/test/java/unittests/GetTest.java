@@ -1,7 +1,7 @@
 package unittests;
 
-import static org.hamcrest.Matchers.*;
 import org.testng.annotations.Test;
+import static org.hamcrest.Matchers.*;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 

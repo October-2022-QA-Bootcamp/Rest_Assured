@@ -1,7 +1,7 @@
 package functionaltests;
 
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import endpoints.Players;
 
 public class GetPlayersTest{

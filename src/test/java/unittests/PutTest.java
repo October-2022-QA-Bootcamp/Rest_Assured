@@ -1,9 +1,8 @@
 package unittests;
 
+import org.testng.annotations.Test;
 import java.util.HashMap;
 import java.util.Map;
-
-import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
